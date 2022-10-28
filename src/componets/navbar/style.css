@@ -1,0 +1,26 @@
+
+
+
+.navbar {
+    
+    text-decoration: none;
+    background-color: rgb(190, 169, 169);
+    color: rgb(82, 45, 45);
+}
+
+.navbar ul {
+    
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar ul li{
+   
+    list-style: none;
+    margin: 1cm;
+}
+
+.navbar ul li a {
+    font-family: fantasy;
+    text-decoration: none;
+}
