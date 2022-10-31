@@ -1,17 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
 import Navbar from './componets/navbar/Navbar';
+import ItemContainer from './componets/ItemContainer/ItemContainer';
+import './App.css';
 
 
 function App() {
   return (
-
-
-    <div className="App">
-      <header className="App-header">
-      <Navbar label/>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      
+      <ItemContainer name="Bienvenidos a MegaCryto"/>
+    </>
   );
 }
 

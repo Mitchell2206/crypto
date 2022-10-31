@@ -1,0 +1,45 @@
+
+
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-decoration: none;
+    background-color: rgba(215, 236, 24, 0.568);
+    color:  rgba(78, 78, 78, 0.473);
+    height: 70px;
+    align-items: center;
+}
+
+.navbar h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    margin: 20px;
+    color: rgba(62, 63, 58, 0.925);
+}
+
+.navbar h1:hover{
+    text-decoration: line-through;
+    color: rgb(0, 0, 0);
+}
+
+.navbar ul {
+    
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.navbar ul li{
+
+    list-style: none;
+    margin: 1cm;
+}
+
+.navbar ul li a {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.699);
+    font-family: monospace  ;
+    text-decoration: none;
+}
