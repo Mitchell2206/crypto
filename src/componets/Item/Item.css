@@ -14,18 +14,20 @@
     width: 300px;
     height: 400px;
     padding: 10px;
-   
-    background-color: rgb(245, 245, 245);
+    background-color: rgba(36, 33, 33, 0.747);
     justify-content: space-around;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    position: relative;
     
     
    
 }
+
 .itemPerfume h2 {
     
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgba(8, 8, 8, 0.493);
+    font-family: 'Spartan",sans-serif';
+    color: rgb(255, 255, 255);
     font-size: 15px;
-   
    
 }

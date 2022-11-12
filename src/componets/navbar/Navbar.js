@@ -7,7 +7,7 @@ const Navbar = () => {
     return (
         
         <div className="navbar">
-            <h1 className="titulo">MitchPerfumeria</h1>
+            <h1 className="titulo">MITCH PARFAM</h1>
             <ul>
                 <li><a href="">INICIO</a></li>
                 <li><a href="">FRAGANCIA DE DAMA</a></li>
