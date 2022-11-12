@@ -6,17 +6,17 @@
     flex-direction: row;
     justify-content: space-between;
     text-decoration: none;
-    background-color: rgba(215, 236, 24, 0.568);
-    color:  rgba(78, 78, 78, 0.473);
+    background-color: rgba(0, 0, 0, 0.075);
+    color:  rgba(255, 255, 255, 0.877);
     height: 70px;
     align-items: center;
 }
 
 .navbar h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 30px;
     margin: 20px;
-    color: rgba(62, 63, 58, 0.925);
+    color: rgb(0, 0, 0);
 }
 
 .navbar h1:hover{
@@ -38,8 +38,8 @@
 }
 
 .navbar ul li a {
-    font-size: 20px;
-    color: rgba(0, 0, 0, 0.699);
-    font-family: monospace  ;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.568);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif  ;
     text-decoration: none;
 }

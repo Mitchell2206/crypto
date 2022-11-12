@@ -1,17 +1,18 @@
 import "./Navbar.css"
-import Icon from "../Icon/Icon"
+import Icon from "../CartWidget/Icon"
+
 
 
 const Navbar = () => {
     return (
         
         <div className="navbar">
-            <h1 className="titulo">MEGACRIPTO</h1>
+            <h1 className="titulo">MitchPerfumeria</h1>
             <ul>
-                <li><a href="">PRODUCTOS</a></li>
-                <li><a href="">ARMA TU PC</a></li>
-                <li><a href="">MARCAS</a></li>
-                <li><a href="">AYUDA</a></li>
+                <li><a href="">INICIO</a></li>
+                <li><a href="">FRAGANCIA DE DAMA</a></li>
+                <li><a href="">FRAGANCIA DE CABALLERO</a></li>
+                <li><a href="">PARA TODOS</a></li>
             </ul>
 
            <Icon/>

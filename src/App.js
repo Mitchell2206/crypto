@@ -1,16 +1,16 @@
-import Navbar from './componets/navbar/Navbar';
-import ItemContainer from './componets/ItemContainer/ItemContainer';
-import './App.css';
+import ItemListContainer from "./componets/page/ItemListContainer/ItemListContainer"
+import Navbar from "./componets/navbar/Navbar"
 
 
 function App() {
   return (
     <>
-      <Navbar />
-      
-      <ItemContainer name="Bienvenidos a MegaCryto"/>
+    
+    <Navbar/>
+    <ItemListContainer/>
     </>
   );
 }
 
 export default App;
+  

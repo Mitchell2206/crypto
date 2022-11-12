@@ -1,0 +1,4 @@
+.ItemContenedor{
+    display: flex;
+    flex-direction: row;
+}
