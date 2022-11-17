@@ -1,0 +1,22 @@
+
+.itemDetail{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemDetail img{
+ 
+    width: 300px;
+    height: 300px;
+}
+
+.itemDetail h2 {
+    
+    font-family: 'Spartan",sans-serif';
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+   
+}

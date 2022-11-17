@@ -1,39 +1,46 @@
 
 import { useState, useEffect } from "react"
+import { useParams } from "react-router-dom";
 import { Data } from "../../Data/Data";
 import ItemList from "../../ItemList/ItemList";
 import "./ItemListContainer.css"
 
 
-
-function ItemListContainer() {
+const ItemListContainer = () => {
 
   const [listperfume, setListPerfume] = useState([]);
+  const { generoName } = useParams();
 
-  const getPerfum = new Promise((resolve, reject) =>{
+  
+
+  const getPerfum = new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve(Data);
-    }, 2000);
+      if (generoName) {
+        const generoFiltrado = Data.filter((generos) => {
+          return generos.genero === generoName;
+        });
+        resolve(generoFiltrado)
+        
+      } else {
+        resolve (Data);
+      }
+
+    }, 1000);
   });
 
+  useEffect(() => {
+    getPerfum
+    .then((res)=> setListPerfume(res))
+    .catch((error) => console.log(error));
+  },[generoName]);
 
-  useEffect(() =>{
-    getPerfum.then((respuesta) =>{
-      setListPerfume(respuesta);
-    });
-    setTimeout(() => {
-
-    }, 2000);
-    
-  },[listperfume]);
-
-  return (
-    
-    <ItemList listperfume={listperfume}/>
-
+ return (
+  <div>
+    <ItemList listperfume={listperfume} />
+  </div>
+  
   );
 
 }
-
 export default ItemListContainer
 
