@@ -9,13 +9,11 @@ const CartProvider = ({ children }) => {
   };
 
   const addToCart = (product, quantity) => {
-
-    console.log(product, quantity)
-   /* if (isInCart(product.id)) {
+    if (isInCart(product.id)) {
       alert('El producto ya se encuentra en el carrito');
     } else {
       setCart([...cart, { ...product, quantity }]);
-    }*/
+    }
   };
 
   const clear = () => {
