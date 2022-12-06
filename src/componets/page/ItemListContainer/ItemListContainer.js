@@ -1,46 +1,51 @@
-
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom";
-import { Data } from "../../Data/Data";
 import ItemList from "../../ItemList/ItemList";
+import { collection, getDocs, getFirestore, where, query } from "firebase/firestore"
 import "./ItemListContainer.css"
+
 
 
 const ItemListContainer = () => {
 
-  const [listperfume, setListPerfume] = useState([]);
+  const [ items, setItems ] = useState([]);
   const { generoName } = useParams();
 
-  
 
-  const getPerfum = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (generoName) {
-        const generoFiltrado = Data.filter((generos) => {
-          return generos.genero === generoName;
+
+  const getProducts = () => {
+    const db = getFirestore();
+    const queryBase = collection(db, 'items');
+
+    const queryshop = generoName
+
+      ? query(queryBase, where("genero", "==", generoName))
+      : queryBase;
+
+    getDocs(queryshop)
+      .then((resp) => {
+        const data = resp.docs.map((item) => {
+         
+          return { id: item.id, ...item.data() }
         });
-        resolve(generoFiltrado)
-        
-      } else {
-        resolve (Data);
-      }
+        setItems(data)
 
-    }, 1000);
-  });
+      })
+      .catch((error) => {
+        console.log(error)
+      });
+
+  };
+
 
   useEffect(() => {
-    getPerfum
-    .then((res)=> setListPerfume(res))
-    .catch((error) => console.log(error));
-  },[generoName]);
+    getProducts();
 
- return (
-  <div>
-    <ItemList listperfume={listperfume} />
-  </div>
-  
-  );
+  }, [generoName]);
 
-}
+
+  return <div> {<ItemList products={items} />} </div>
+
+};
+
 export default ItemListContainer
-

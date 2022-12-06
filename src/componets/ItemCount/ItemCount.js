@@ -1,30 +1,22 @@
-import {useState} from 'react'
 
-const ItemCount = () => {
+const ItemCount = ({ setCount }) => {
 
-const [contador, setContador] = useState(0);
 
-    const Agregar = ()=>{
-      setContador(contador + 1)
-      
+    const agregarItems = () => {
+        setCount((count) => count + 1);
     }
 
-    const sacar = ()=>{
-      setContador( contador - 1)
-      
+    const restarItems = () => {
+        setCount((count) => count - 1);
     }
 
-  return (
-    <div>
-      <p>
-        {contador}
-      </p>
-      <div>
-      <button className='btn btn-primary' onClick={sacar}>Quitar</button>
-        <button className='btn btn-primary' onClick={Agregar}>Agregar</button>
-      </div>
-    </div>
-  )
-};
+
+    return (
+        <div className='botones'>
+            <button onClick={restarItems}>Eliminar</button>
+            <button onClick={agregarItems}>Agregar</button>
+        </div>
+    );
+}
 
 export default ItemCount
