@@ -1,0 +1,40 @@
+
+.botones {
+    
+}
+
+.botones .contador{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+
+}
+
+.botones .eliminar {
+    font-size: 15px;
+    padding: 5px;
+    text-decoration: none;
+    background-color: aliceblue;
+    border-radius: 5px;
+    margin: 5px;
+    color: rgb(22, 77, 99);
+}
+.botones .agregar {
+    font-size: 15px;
+    padding: 5px;
+    text-decoration: none;
+    background-color: aliceblue;
+    border-radius: 5px;
+    margin: 5px;
+    color: rgb(22, 77, 99);
+}
+
+.botones .añadir{
+    font-size: 15px;
+    padding: 5px;
+    text-decoration: none;
+    background-color: aliceblue;
+    border-radius: 5px;
+    margin: 5px;
+    color: rgb(22, 77, 99);
+}

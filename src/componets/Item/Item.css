@@ -1,5 +1,10 @@
 
 
+.contenedor-detalle{
+    background-color: rgb(150, 126, 96);
+}
+
+
  .itemPerfume img{
    border-radius: 5px;
     width: 200px;
@@ -9,13 +14,14 @@
 .itemPerfume{
     display: flex;
     flex-direction: column;
-    
     align-items: center;
     width: 300px;
     height: 400px;
     padding: 10px;
-    background-color: rgba(36, 33, 33, 0.747);
-    justify-content: space-around;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: rgba(73, 66, 66, 0.747);
+    justify-content: space -around;
     letter-spacing: 0.9px;
     text-transform: uppercase;
     position: relative;
@@ -24,8 +30,14 @@
    
 }
 
+.itemPerfume .descripcion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .itemPerfume h2 {
-    
+    text-decoration:none;
     font-family: 'Spartan",sans-serif';
     color: rgb(255, 255, 255);
     font-size: 15px;

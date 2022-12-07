@@ -1,0 +1,7 @@
+.CardProduct {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.466);
+    
+}

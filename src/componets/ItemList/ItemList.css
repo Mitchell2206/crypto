@@ -1,7 +1,7 @@
 .ItemList{
     display: flex;
-    flex-direction: row;
-    border-color: black;
+    flex-direction: column;
+    border-color: rgb(163, 55, 55);
     padding-top: 5px;
 
 

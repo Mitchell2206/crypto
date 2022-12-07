@@ -3,16 +3,16 @@ import ItemListContainer from "./componets/page/ItemListContainer/ItemListContai
 import ItemDetailContainer from "./componets/page/ItemDetailContainer/ItemDetailContainer";
 import Navbar from "./componets/navbar/Navbar"
 import Cart from "./componets/page/Cart/Cart";
-import { CartContext } from "./componets/CartContext/CartProvider"
-
-
-
+import { CartProvider } from "./componets/CartContext/CartProvider"
+import Footer from "./componets/Footer/Footer";
 
 
 
 function App() {
+  
+  
   return (
-    <CartContext.Provider value={{cart: []}}>
+    <CartProvider value={{cart: []}}>
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -20,10 +20,11 @@ function App() {
           <Route path="/genero/:generoName" element={<ItemListContainer />} />
           <Route path="/genero/:generoName/item/:id" element={<ItemDetailContainer />} />
           <Route path="/item/:id" element={<ItemDetailContainer />} />
-          <Route path="cart" element={<Cart />} />
+          <Route path="cart" element={<Cart/>} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
-    </CartContext.Provider>
+    </CartProvider>
   );
 }
 

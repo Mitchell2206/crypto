@@ -1,22 +1,46 @@
-
-.itemDetail{
+.contenedor {
+    background-color: rgba(36, 33, 33, 0.568);
     padding: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: center
 }
 
-.itemDetail img{
- 
+.contenedor .cantidad-detalle {
+    font-family: 'Spartan",sans-serif';
+    font-size: 45pxpx;
+    color: rgb(255, 255, 255);
+    ;
+}
+.contenedor h2 {
+    font-family: 'Spartan",sans-serif';
+    font-size:25px;
+    color: rgb(255, 255, 255);;
+}
+.contenedor .img-detalle {
+
+    border-radius: 5px;
     width: 300px;
     height: 300px;
 }
 
-.itemDetail h2 {
-    
-    font-family: 'Spartan",sans-serif';
-    color: rgb(0, 0, 0);
-    font-size: 25px;
+.contenedor .btnCarrito {
+    font-size: 15px;
+    padding: 5px;
+    text-decoration: none;
+    background-color: aliceblue;
+    border-radius: 5px;
+    color: rgb(22, 77, 99);
    
 }
+
+.contenedor .btnComprar{
+    font-size: 15px;
+    padding: 5px;
+    text-decoration: none;
+    background-color: aliceblue;
+    border-radius: 5px;
+    margin: 5px;
+    color: rgb(22, 77, 99);
+   
+} 

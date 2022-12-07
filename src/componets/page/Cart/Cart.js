@@ -1,25 +1,26 @@
 import { useContext, useState, useEffect } from 'react';
 import { CartContext } from '../../CartContext/CartProvider';
-import {collection, addDoc, getFirestore, doc, updateDoc, } from 'firebase/firestore';
-
-
+import { collection, addDoc, getFirestore, doc, updateDoc, } from 'firebase/firestore';
+import "../Cart/Cart.css"
+import Swal from 'sweetalert2'
+import { Link } from 'react-router-dom';
 
 
 const Cart = ({ }) => {
 
-  const { cart } = useContext(CartContext);
+  const { cart, eliminarUno } = useContext(CartContext);
 
   const [total, setTotal] = useState(0);
 
   const [formValues, setFormValues] = useState({
-    name: '',
-    phone: '',
+    nombre: '',
+    telefono: '',
     email: '',
   });
 
   const getTotalPrice = () => {
     setTotal(
-      cart.reduce((acc, product) => acc + product.price * product.quantity, 0)
+      cart.reduce((acc, product) => acc + product.precio * product.quantity, 0)
     );
   };
 
@@ -28,8 +29,8 @@ const Cart = ({ }) => {
     const query = collection(db, 'orden');
     const newOrder = {
       buyer: {
-        name: formValues.nombre,
-        phone: formValues.telefono,
+        nombre: formValues.nombre,
+        telefono: formValues.telefono,
         email: formValues.email,
       },
       items: cart,
@@ -37,7 +38,7 @@ const Cart = ({ }) => {
     };
     addDoc(query, newOrder)
       .then((response) => {
-        alert(`Orden creada con el id ${response.id}`);
+        Swal.fire(`Orden creada con el id ${response.id}`)
         return response;
       })
       .then((res) => {
@@ -45,79 +46,60 @@ const Cart = ({ }) => {
           const query = doc(db, 'items', product.id);
           updateDoc(query, {
             stock: product.stock - product.quantity,
-           
+
           });
         });
       })
       .catch((error) => console.log(error));
   };
   useEffect(() => {
-    getTotalPrice();
+    getTotalPrice(console.log(total));
   }, [cart]);
+
   const handleInputChange = (event) => {
-    console.log(event.target.name);
-    console.log(event.target.value);
     setFormValues({
       ...formValues,
       [event.target.name]: event.target.value,
     });
   };
 
+  if (cart.length === 0) {
+    return (
+        <>
+            <p className="SinElementos">No hay elementos en el carrito.</p>
+            <Link to='/' className="Hacer-compra">Hacer compras</Link>
+        </>
+    );
+}
+
+
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        width: '100%',
-        justifyContent: 'space-around',
-      }}
-    >
+
+
+    <div className='contenedor-foms-producs'>
       {cart.map((product) => (
-        <div
-          key={product.id}
-          style={{
-            marginTop: '20px',
-            padding: '40px',
-            border: '1px solid gray',
-          }}
-        >
-          <img
-            alt={product.nombre}
-            src={product.imagen}
-            width={'150px'}
-          />
-          <h2>{product.nombre}</h2>
-          <h2>{product.precio}</h2>
-          <h2>{product.description}</h2>
-          <h2>{product.quantity}</h2>
+        <div className='cart' key={product.id}>
+          <img className='img' alt={product.nombre} src={product.imagen} />
+          <h2>{product.categoryId}</h2>
+          <h2>{product.descripción}</h2>
+          <h2> Precio $ {product.precio}</h2>
+          <h2>Unidades {product.quantity}</h2>
+          <button onClick={() => eliminarUno(product.id)} className="btnEliminar">Eliminar</button>
         </div>
       ))}
-      <div>
+      <div className='orden'>
         <h1>Total: {total} </h1>
-        <button onClick={createOrder}>Crear orden</button>
-        <div>
+        
+        
+        <button className='nuevaOrden' onClick={createOrder}>Crear orden</button>
+        <div className='inputs'>
           <h2>Formulario</h2>
-          <input
-            name="name"
-            type="text"
-            placeholder="Nombre"
-            value={formValues.nombre}
-            onChange={handleInputChange}
+          <input name="nombre" type="text" placeholder="nombre" value={formValues.nombre} onChange={handleInputChange}
           />
-          <input
-            name="phone"
-            type="text"
-            placeholder="Telefono"
-            value={formValues.telefono}
-            onChange={handleInputChange}
+          <input name="telefono" type="text" placeholder="telefono" value={formValues.telefono} onChange={handleInputChange}
           />
-          <input
-            name="email"
-            type="text"
-            placeholder="Email"
-            value={formValues.email}
-            onChange={handleInputChange}
+          <input name="email" type="text" placeholder="email" value={formValues.email} onChange={handleInputChange}
           />
         </div>
       </div>

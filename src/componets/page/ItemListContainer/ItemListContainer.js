@@ -44,7 +44,7 @@ const ItemListContainer = () => {
   }, [generoName]);
 
 
-  return <div> {<ItemList products={items} />} </div>
+  return <div className="CardProduct"> {<ItemList products={items} />} </div>
 
 };
 

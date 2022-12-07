@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import "./CartWidget.css"
 
 const CartWidget = () => {
+ 
   return (
     <div className="car">
       <Link to={'/cart'}>

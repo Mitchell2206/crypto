@@ -1,0 +1,127 @@
+.contenedor-foms-producs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 2em;
+  background-color: gray;
+
+
+}
+
+
+.contenedor-foms-producs .orden {
+  font-family: 'Spartan",sans-serif';
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  padding: 50px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+
+
+.contenedor-foms-producs .orden .nuevaOrden {
+  margin: 10px;
+  font-size: 15px;
+  padding: 5px;
+  text-decoration: none;
+  background-color: aliceblue;
+  border-radius: 5px;
+  color: rgb(22, 77, 99);
+  display: flex;
+
+}
+
+.contenedor-foms-producs .orden .inputs h2 {
+  font-family: 'Spartan",sans-serif';
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+}
+
+.contenedor-foms-producs .orden .inputs input {
+  margin: 10px;
+  font-size: 15px;
+  padding: 5px;
+  text-decoration: none;
+  background-color: aliceblue;
+  border-radius: 5px;
+  color: rgb(22, 77, 99);
+
+}
+
+.contenedor-foms-producs .cart {
+  padding: 50px;
+  background-color: rgba(36, 33, 33, 0.747);
+  display: flex;
+  gap: auto;
+  width: 200px;
+  height: 250px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+
+
+.SinElementos{
+  font-family: 'Spartan",sans-serif';
+  font-size: 40px;
+  color: rgb(3, 3, 3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.Hacer-compra{
+  margin: 100px;
+  font-size: 15px;
+ height: 30px;
+  width: 200px;
+  text-decoration: none;
+  background-color: rgba(2, 2, 2, 0.575);
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+.contenedor-foms-producs .cart h2 {
+  font-family: 'Spartan",sans-serif';
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+  ;
+
+
+}
+
+.contenedor-foms-producs .cart img {
+  border-radius: 5px;
+
+  width: 150px;
+  height: 150px;
+}
+
+.contenedor-foms-producs .cart .btnEliminar {
+ 
+  font-size: 15px;
+ height: 30px;
+  width: 200px;
+  text-decoration: none;
+  background-color: rgba(2, 2, 2, 0.575);
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

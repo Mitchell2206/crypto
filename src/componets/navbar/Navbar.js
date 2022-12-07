@@ -2,13 +2,9 @@
 import { NavLink } from "react-router-dom"
 import "./Navbar.css"
 import CartWidget from "../CartWidget/CartWidget"
-import { useContext , CartContext } from "react"
-
-
-/*const {cart} = useContext(CartContext);*/
 
 const Navbar = () => {
-
+    
     
     
     return (
@@ -26,10 +22,11 @@ const Navbar = () => {
                     <NavLink to="/genero/masculino">FRAGANCIA DE CABALLERO</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/genero/universal">PARA TODOS</NavLink>
+                    <NavLink to="/genero/unisex">PARA TODOS</NavLink>
                 </li>
             </ul>
                <CartWidget/>
+               
         </div>
     )
 }
