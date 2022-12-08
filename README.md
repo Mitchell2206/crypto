@@ -11,7 +11,7 @@ ultimo Firebase (Firestore).
 
 Te dejare un Gif para que le eches un vistazo.
 
-(https://media.giphy.com/media/9YiBrFARxXPaiwLAzP/giphy.gif)
+![](https://media.giphy.com/media/9YiBrFARxXPaiwLAzP/giphy.gif)
 
 
 
