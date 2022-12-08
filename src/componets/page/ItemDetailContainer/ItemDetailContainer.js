@@ -7,23 +7,23 @@ const ItemDetailContainer = () => {
 
   const [perfumeList, setPerfumeList] = useState()
   const { id } = useParams();
-  
+
 
   useEffect(() => {
     const db = getFirestore();
     const queryDoc = doc(db, 'items', id);
     getDoc(queryDoc)
-        .then(res => setPerfumeList({ id: res.id, ...res.data() }))
-        .catch((error) => console.log(error));
-}, [id]);
+      .then(res => setPerfumeList({ id: res.id, ...res.data() }))
+      .catch((error) => console.log(error));
+  }, [id]);
 
 
 
 
   return (
     <div>
-    
-       {perfumeList && <ItemDetail perfumeList={perfumeList} />}
+
+      {perfumeList && <ItemDetail perfumeList={perfumeList} />}
     </div>
   )
 }

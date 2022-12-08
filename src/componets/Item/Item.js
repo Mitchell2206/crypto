@@ -7,7 +7,7 @@ const Item = ({ product }) => {
     return (
 
         <Link className="itemPerfume" to={`item/${product.id}`}  >
-            
+
             <div className="descripcion">
                 <img alt={product.categoryId} src={product.imagen} />
                 <h2> {product.categoryId}</h2>

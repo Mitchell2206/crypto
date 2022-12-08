@@ -4,7 +4,7 @@ import Swal from 'sweetalert2'
 export const CartContext = createContext([]);
 
 export const CartProvider = ({ children }) => {
-   const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState([]);
   const isInCart = (id) => {
     return cart.some((product) => product.id === id);
   };
@@ -13,7 +13,7 @@ export const CartProvider = ({ children }) => {
 
     if (isInCart(product.id)) {
       Swal.fire(`El producto ya se encuentra en el carrito`)
-      
+
     } else {
       setCart([...cart, { ...product, quantity }]);
     }
@@ -30,7 +30,7 @@ export const CartProvider = ({ children }) => {
   return (
     <CartContext.Provider value={{ cart, addToCart, clear, eliminarUno }}>
       {children}
-      
+
     </CartContext.Provider>
   );
 };

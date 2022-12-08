@@ -8,7 +8,7 @@ import "./ItemListContainer.css"
 
 const ItemListContainer = () => {
 
-  const [ items, setItems ] = useState([]);
+  const [items, setItems] = useState([]);
   const { generoName } = useParams();
 
 
@@ -25,7 +25,7 @@ const ItemListContainer = () => {
     getDocs(queryshop)
       .then((resp) => {
         const data = resp.docs.map((item) => {
-         
+
           return { id: item.id, ...item.data() }
         });
         setItems(data)

@@ -39,9 +39,9 @@ const Cart = ({ }) => {
     addDoc(query, newOrder)
       .then((response) => {
         Swal.fire(
-        'GRACIAS POR TU COMPRA!',
-        `Orden creada con el id ${response.id}`,
-        'success'
+          'GRACIAS POR TU COMPRA!',
+          `Orden creada con el id ${response.id}`,
+          'success'
         )
         return response;
       })
@@ -61,7 +61,7 @@ const Cart = ({ }) => {
   }, [cart]);
 
 
-  
+
 
 
   const handleInputChange = (event) => {
@@ -73,12 +73,12 @@ const Cart = ({ }) => {
 
   if (cart.length === 0) {
     return (
-        <>
-            <p className="SinElementos">No hay elementos en el carrito.</p>
-            <Link to='/' className="Hacer-compra">Hacer compras</Link>
-        </>
+      <>
+        <p className="SinElementos">No hay elementos en el carrito.</p>
+        <Link to='/' className="Hacer-compra">Hacer compras</Link>
+      </>
     );
-}
+  }
 
 
 
@@ -98,10 +98,10 @@ const Cart = ({ }) => {
       ))}
       <div className='orden'>
         <h1>Total: {total} </h1>
-        
-        
+
+
         <button className='nuevaOrden' onClick={createOrder}>Crear orden</button>
-       
+
         <div className='inputs'>
           <h2>Formulario</h2>
           <input name="nombre" type="text" placeholder="nombre" value={formValues.nombre} onChange={handleInputChange}
