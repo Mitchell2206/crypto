@@ -10,7 +10,6 @@ import Footer from "./componets/Footer/Footer";
 
 function App() {
   
-  
   return (
     <CartProvider value={{cart: []}}>
       <BrowserRouter>

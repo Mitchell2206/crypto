@@ -1,3 +1,21 @@
+# Perfumeria Mitchell React App
+
+## Introducción Proyecto Final CODERHOUSE
+
+Hola! 
+Bienvenido a mi proyecto final, espero te guste el trabajo que realice 
+con las siguientes herramientas:
+
+HTML, CSS, JS, sweetalert2 donde añadi alertas las limpias y atractivas, react y por
+ultimo Firebase (Firestore).
+
+Te dejare un Gif para que le eches un vistazo.
+
+(https://media.giphy.com/media/9YiBrFARxXPaiwLAzP/giphy.gif)
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

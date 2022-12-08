@@ -8,17 +8,15 @@ const ItemDetail = ({ perfumeList }) => {
   const { cart, addToCart } = useContext(CartContext);
 
   const onAdd = (quantity) => {
-
-    console.log(`agregaste ${quantity} unidades`)
     addToCart(perfumeList, quantity)
   }
 
   
-  console.log(perfumeList);
+  
 
   return (
     <div className="contenedor">
-
+  
       <h1 className="cantidad-detalle"> Tiene {cart.length} articulos en su carrito</h1>
       <img alt={perfumeList.categoryId} className="img-detalle" src={perfumeList.imagen} />
 

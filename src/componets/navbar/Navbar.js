@@ -3,10 +3,11 @@ import { NavLink } from "react-router-dom"
 import "./Navbar.css"
 import CartWidget from "../CartWidget/CartWidget"
 
+
+
 const Navbar = () => {
     
-    
-    
+
     return (
 
         <div className="navbar">
@@ -24,9 +25,11 @@ const Navbar = () => {
                 <li>
                     <NavLink to="/genero/unisex">PARA TODOS</NavLink>
                 </li>
+                
             </ul>
-               <CartWidget/>
-               
+
+            <CartWidget />
+            
         </div>
     )
 }

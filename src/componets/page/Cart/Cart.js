@@ -38,7 +38,11 @@ const Cart = ({ }) => {
     };
     addDoc(query, newOrder)
       .then((response) => {
-        Swal.fire(`Orden creada con el id ${response.id}`)
+        Swal.fire(
+        'GRACIAS POR TU COMPRA!',
+        `Orden creada con el id ${response.id}`,
+        'success'
+        )
         return response;
       })
       .then((res) => {
@@ -53,8 +57,12 @@ const Cart = ({ }) => {
       .catch((error) => console.log(error));
   };
   useEffect(() => {
-    getTotalPrice(console.log(total));
+    getTotalPrice();
   }, [cart]);
+
+
+  
+
 
   const handleInputChange = (event) => {
     setFormValues({
@@ -93,6 +101,7 @@ const Cart = ({ }) => {
         
         
         <button className='nuevaOrden' onClick={createOrder}>Crear orden</button>
+       
         <div className='inputs'>
           <h2>Formulario</h2>
           <input name="nombre" type="text" placeholder="nombre" value={formValues.nombre} onChange={handleInputChange}

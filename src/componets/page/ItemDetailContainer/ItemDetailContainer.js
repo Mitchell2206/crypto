@@ -22,6 +22,7 @@ const ItemDetailContainer = () => {
 
   return (
     <div>
+    
        {perfumeList && <ItemDetail perfumeList={perfumeList} />}
     </div>
   )
